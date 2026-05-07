@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EvalyzeAI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>EvalyzeAI</h1>
+
+    <p class="subtitle">
+      AI-Powered Workforce Assessment
+    </p>
+
+    <div class="question-box">
+      <h2>AI Interview Question</h2>
+
+      <p id="question">
+        Tell us about yourself and your technical skills.
+      </p>
+    </div>
+
+    <video id="preview" autoplay muted playsinline></video>
+
+    <div class="button-group">
+      <button id="startBtn">Start Interview</button>
+
+      <button id="stopBtn" disabled>Stop Interview</button>
+
+    </div>
+
+    <button id="analyzeBtn" disabled>
+    Next Question
+    </button>
+
+    <div id="loading" class="hidden">
+      AI is analyzing interview...
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

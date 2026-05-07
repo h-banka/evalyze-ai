@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Result</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="result-card">
+
+      <h1>Assessment Result</h1>
+
+      <div class="final-result" id="category">
+        Job Ready
+      </div>
+
+      <div class="score-grid">
+
+        <div class="score-box">
+          <h3>Authenticity</h3>
+          <p id="authenticity"></p>
+        </div>
+
+        <div class="score-box">
+          <h3>Relevance</h3>
+          <p id="relevance"></p>
+        </div>
+
+        <div class="score-box">
+          <h3>Clarity</h3>
+          <p id="clarity"></p>
+        </div>
+
+        <div class="score-box">
+          <h3>Confidence</h3>
+          <p id="confidence"></p>
+        </div>
+
+      </div>
+
+      <div class="transcript-section">
+        <h2>Transcript</h2>
+        <p id="transcript"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("analysisResult"));
+
+    document.getElementById("category").textContent = data.category;
+    document.getElementById("authenticity").textContent = data.authenticity_score;
+    document.getElementById("relevance").textContent = data.relevance;
+    document.getElementById("clarity").textContent = data.clarity;
+    document.getElementById("confidence").textContent = data.confidence;
+    document.getElementById("transcript").textContent = data.transcript;
+  </script>
+
+</body>
+</html>
