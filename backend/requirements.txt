@@ -1,0 +1,23 @@
+# ── Web framework ────────────────────────────────────────────────────────────
+fastapi==0.111.0          # Modern async web framework
+uvicorn[standard]==0.29.0 # ASGI server (runs FastAPI); [standard] adds websocket + reload support
+python-multipart==0.0.9   # Required for FastAPI file upload parsing
+
+# ── Video / Audio processing ─────────────────────────────────────────────────
+moviepy==1.0.3            # Extracts audio from video files (wraps ffmpeg)
+opencv-python==4.10.0.84  # Computer vision (face detection)
+# Note: moviepy requires ffmpeg to be installed on your system.
+# Install it with:  sudo apt install ffmpeg   (Linux/WSL)
+#                   brew install ffmpeg        (macOS)
+#                   https://ffmpeg.org/download.html (Windows)
+
+# ── Speech-to-text ───────────────────────────────────────────────────────────
+openai-whisper==20231117  # OpenAI Whisper — runs locally, no API key needed
+# Whisper also needs ffmpeg (already covered above).
+
+# ── Data validation ──────────────────────────────────────────────────────────
+pydantic==2.7.1           # Request/response schemas (FastAPI uses this internally)
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+numpy<2.0                 # Whisper requires numpy < 2.0
+torch                     # Whisper depends on PyTorch (CPU version is fine for Whisper base)
