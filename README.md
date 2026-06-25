@@ -56,7 +56,6 @@ The platform is designed to support multilingual and mobile-first interview expe
 
 ### Frontend
 - HTML
-- CSS
 - JavaScript
 
 ### Backend
